@@ -1,17 +1,33 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+/**
+ * 05-发表评论
+ */
 
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
-);
+//1. 引入核心包
+import React from 'react'
+import ReactDOM from 'react-dom'
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+//2. 类组件
+class Child extends React.Component {
+  state = {
+    list: [
+      { id: 1, username: '张三', content: '做一个凡人' },
+      { id: 2, username: '李四', content: '贪财好色' },
+      { id: 3, username: '王五', content: '一身正气' },
+    ],
+    username: '',
+    content: '',
+  }
+  render() {
+    let { username, content } = this.state
+    return (
+        <div>
+            
+        </div>
+    )
+  }
+
+
+}
+
+//3. 渲染
+ReactDOM.render(<Child />, document.getElementById('root'))

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>ReactDom</title>
+	<style>
+		.father {
+			background-color: aqua;
+		}
+	</style>
+</head>
+<body>
+	<div id="root"></div>
+
+	<script src="../node_modules/react/umd/react.development.js"></script>
+	<script src="../node_modules/react-dom/umd/react-dom.development.js"></script>
+
+	
+	<script>
+
+		// const h1 = React.createElement('h1',
+		// {
+		// 	title: '哈哈哈',
+		// 	classname: 'father'
+		// },
+		// '这是h1标签')
+
+		const h1 = React.createElement('div',
+		{
+			title: '哈哈哈',
+			classname: 'father'
+		},
+		'我是div标签',
+		React.createElement('span',null,'我是span标签'),
+		React.createElement('ul',null,
+		React.createElement('li',null,'li标签'),
+		React.createElement('li',null,'li标签'),
+		React.createElement('li',null,'li标签')))
+
+		ReactDOM.render(h1, document.getElementById('root'))
+
+	</script>
+</body>
+</html>
