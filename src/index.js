@@ -21,9 +21,21 @@ class Child extends React.Component {
     let { username, content } = this.state
     return (
         <div>
-            
+           <div>
+             评论的人：{' '}
+             <input
+             name='username'
+             value={username}
+             onChange={this.handle}
+             ></input>
+           </div> 
         </div>
     )
+  }
+  handle = e => {
+    this.setState({
+      [e.target.name]: e.target.value
+    })
   }
 
 
